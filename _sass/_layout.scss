@@ -25,7 +25,6 @@
 }
 
 .site-nav {
-    float: right;
     line-height: 56px;
 
     .menu-icon {
@@ -240,7 +239,67 @@
         }
     }
 }
+
 .main-site-links {
-  display: inline;
+  display: block;
+  float: left;
   color: red;
+  margin: 0px;
+  margin-right: 250px;
+  padding: -10px;
+  p {
+    margin-top: -10px;
+  }
+}
+
+.brand-logo {
+  margin-left: 50px;
+  margin-top: 20px;
+  float:left;
+}
+
+.header-background-image {
+  border-top: 2px solid $brand-color;
+  border-bottom: 2px solid $brand-color;
+  margin-top: 20px;
+}
+
+.newsletter-form {
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  border-top: 2px solid $brand-color;
+  border-bottom: 1px solid $brand-color;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  h1 {
+   font-weight: 800;
+   font-size: 28px;
+  }
+  input {
+    vertical-align: middle;
+    height: 34px;
+    border: 1px solid #ccc;
+    font-weight: 600;
+    font-size: 14px;
+    width: 47%;
+    margin-right: 15px;
+    padding-left: 10px;
+    border-radius: 4px;
+  }
+  button {
+    margin: 0px;
+    margin-left: -10px;
+    color: #f9f9f9;
+    background-color: $brand-color;
+    border-color: #ffff43;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+  }
 }
