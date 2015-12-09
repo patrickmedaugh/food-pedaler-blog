@@ -34,7 +34,7 @@
     .page-link {
         color: $text-color;
         line-height: $base-line-height;
-
+        margin-top: 50px;
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
             margin-right: 20px;
@@ -48,6 +48,9 @@
         background-color: $background-color;
         border: 1px solid $grey-color-light;
         border-radius: 5px;
+        .header-background-image {
+          display: none;
+        }
         text-align: right;
 
         .menu-icon {
@@ -245,10 +248,19 @@
   float: left;
   color: red;
   margin: 0px;
-  margin-right: 250px;
   padding: -10px;
-  p {
+  padding-bottom: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid $brand-color;
+  width: 100%;
+  .link-column {
     margin-top: -10px;
+    display: inline-block;
+    float: left;
+    margin-right: 250px
+  }
+  p {
+    margin-bottom: 0px;
   }
 }
 
@@ -268,16 +280,18 @@
   width: 100%;
   margin: auto;
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   text-align: center;
   border-top: 2px solid $brand-color;
   border-bottom: 1px solid $brand-color;
   padding-top: 20px;
   padding-bottom: 20px;
+
   h1 {
    font-weight: 800;
    font-size: 28px;
   }
+
   input {
     vertical-align: middle;
     height: 34px;
@@ -289,6 +303,7 @@
     padding-left: 10px;
     border-radius: 4px;
   }
+
   button {
     margin: 0px;
     margin-left: -10px;
@@ -301,5 +316,82 @@
     border-radius: 4px;
     box-sizing: border-box;
 
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#social {
+  position:relative;
+}
+
+#share-links {
+  position: absolute;
+  top: -45px;
+  width: 200px;
+  div {
+    display: inline;
+    margin: -3px;
+    padding: 15px;
+  }
+}
+#share-links:hover {
+  cursor: pointer;
+}
+
+#fb-share {
+  background-color: #3b5998;
+  img {
+    width: 30px;
+  }
+}
+#twitter-share {
+  background-color: #00ACED;
+  img {
+    width: 30px;
+  }
+}
+
+#gplus-share {
+  background-color: #d34836;
+  img {
+    padding-top: 5px;
+    width: 30px;
+  }
+}
+
+
+#share-button {
+  color: black;
+  display: inline;
+  div {
+    display: inline;
+  }
+
+  h4 {
+    vertical-align: sub;
+  }
+
+  img {
+  margin-right: 5px;
+  }
+}
+
+#share-button:hover {
+  cursor: pointer;
+}
+
+.header-links {
+  display:inline;
+  z-index: -1000;
+    cursor:pointer;
+  }
+  a {
+    color: $text-color;
+  }
+  a:hover {
+    cursor: pointer;
   }
 }

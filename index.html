@@ -4,7 +4,16 @@ layout: default
 
 <div class="home">
   <h1>Latest Posts</h1>
-  <h4>TELL YOUR FRIENDS</h4>
+  <div id="social">
+    <div id="share-links">
+      <div onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fblog.foodpedaler.com%2F', 'newwindow', 'width=300, height=250'); return false;" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fblog.foodpedaler.com%2F" id="fb-share"><img src="http://2.bp.blogspot.com/-5Om0wl0gpMc/UcGd3jpJBKI/AAAAAAAAAaw/oUOdETSNkU0/s1600/facebook.png"></div>
+      <div id="twitter-share" onclick="window.open('https://twitter.com/intent/tweet?text=&url=http%3A%2F%2Fblog.foodpedaler.com%2F', 'newwindow', 'width=300, height=250'); return false;" href="https://twitter.com/intent/tweet?text=&url=http%3A%2F%2Fblog.foodpedaler.com%2F"><img src="http://www.charlestonacademy.co.uk/wp-content/uploads/2013/02/twitter-bird-white-on-blue-e1365769304265.png"></div>
+      <div id="gplus-share" onclick="window.open('https://plus.google.com/share?url=http%3A%2F%2Fblog.foodpedaler.com%2F', 'newwindow', 'width=300, height=250'); return false;"  href="https://plus.google.com/share?url=http%3A%2F%2Fblog.foodpedaler.com%2F"><img src="http://2.bp.blogspot.com/-k4UX8rSagsM/UcGd3sGQSbI/AAAAAAAAAa0/kDbogGEMc0U/s1600/google-plus.png"></div>
+    </div>
+    <div id="share-button" >
+      <img src="http://listsly.com/img/share_icon.png" width=20><h4 id="share-button">TELL YOUR FRIENDS!</h4>
+    </div>
+  </div>
 
   <ul class="post-list">
     {% for post in site.posts %}
