@@ -137,6 +137,9 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    @include media-query($on-laptop) {
+      text-align: center;
+    }
 }
 
 .footer-heading {
@@ -278,12 +281,16 @@
     }
 }
 
+//Custom CSS
+.hidden {
+  display: none !important;
+}
+
+//footer links
 .main-site-links {
   display: block;
   float: left;
   color: red;
-  margin: 0px;
-  padding: -10px;
   padding-bottom: 10px;
   font-size: 14px;
   border-bottom: 1px solid $brand-color;
@@ -291,24 +298,19 @@
   .link-column {
     margin-top: -10px;
     display: inline-block;
-    float: left;
-    margin-right: 250px
+  }
+  .link-column:last-child {
+    margin-left: 240px;
   }
   p {
     margin-bottom: 0px;
   }
-}
-
-.brand-logo {
-  margin-left: 50px;
-  margin-top: 20px;
-  float:left;
-}
-
-.header-background-image {
-  border-top: 2px solid $brand-color;
-  border-bottom: 2px solid $brand-color;
-  margin-top: 20px;
+  @include media-query($on-laptop) {
+    .link-column:last-child {
+      padding-top: 15px;
+      margin-left: 0px;
+    }
+  }
 }
 
 .newsletter-form {
@@ -321,6 +323,10 @@
   border-bottom: 1px solid $brand-color;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  @include media-query($on-laptop) {
+    margin-bottom: 5px;
+  }
 
   h1 {
    font-weight: 800;
@@ -355,10 +361,56 @@
   }
 }
 
-.hidden {
-  display: none;
+
+
+//header
+.brand-logo {
+  margin-left: 50px;
+  margin-top: 20px;
+  float:left;
 }
 
+.header-background-image {
+  border-top: 2px solid $brand-color;
+  border-bottom: 2px solid $brand-color;
+  margin-top: 20px;
+}
+
+.header-link-list {
+  margin-left: 370px;
+  padding-top: 33px;
+}
+
+.accordion {
+  position: absolute;
+  right: 0px;
+  padding-left: 9px;
+  display: block;
+  overflow: hidden;
+  box-shadow: -2px 1px rgba(0, 0, 0, 0.25);
+  top: 35px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 100;
+  opacity: 1;
+  @include media-query($on-laptop) {
+    width: 155px;
+  }
+  @include media-query($on-palm) {
+    width: 175px;
+  }
+}
+
+.header-links {
+  a {
+    color: $text-color;
+  }
+  a:hover {
+    cursor: pointer;
+  }
+}
+
+//share buttons
 #social {
   position:relative;
 }
@@ -418,36 +470,4 @@
   cursor: pointer;
 }
 
-.header-links {
-  a {
-    color: $text-color;
-  }
-  a:hover {
-    cursor: pointer;
-  }
-}
 
-.header-link-list {
-  margin-left: 370px;
-  padding-top: 33px;
-}
-
-.accordion {
-  position: absolute;
-  right: 0px;
-  display: block;
-  overflow: hidden;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  top: 35px;
-  border-radius: 4px;
-  background-color: rgba(100,0,0,0);
-  z-index: 100;
-  opacity: 1;
-  @include media-query($on-laptop) {
-    width: 155px;
-  }
-  @include media-query($on-palm) {
-    width: 175px;
-  }
-
-}

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('#share-links').addClass('hidden')
+  $('#share-links').hide();
   $('#share-button').click(function() {
     $('#share-links').fadeToggle();
   });
