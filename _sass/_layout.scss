@@ -2,7 +2,6 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
@@ -26,7 +25,8 @@
 
 .site-nav {
     line-height: 56px;
-
+    float: left;
+    clear: both;
     .menu-icon {
         display: none;
     }
@@ -42,7 +42,6 @@
     }
 
     @include media-query($on-palm) {
-        position: absolute;
         top: 9px;
         right: $spacing-unit / 2;
         background-color: $background-color;
@@ -52,8 +51,12 @@
           display: none;
         }
         text-align: right;
-
+        .header-link-list {
+          display: none;
+        }
         .menu-icon {
+            position: absolute;
+            right: 20px;
             display: block;
             float: right;
             width: 36px;
@@ -94,6 +97,33 @@
     }
 }
 
+.site-nav {
+  @include media-query($on-laptop) {
+    .header-link-list {
+      display: none;
+    }
+    .menu-icon {
+      position: absolute;
+      right: 20px;
+      display: block;
+      float: right;
+      width: 36px;
+      height: 26px;
+      line-height: 0;
+      padding-top: 10px;
+      text-align: center;
+
+      > svg {
+        width: 18px;
+        height: 15px;
+
+        path {
+          fill: $grey-color-dark;
+        }
+      }
+    }
+  }
+}
 
 
 /**
@@ -313,6 +343,7 @@
     border: 1px solid transparent;
     padding: 6px 12px;
     font-size: 14px;
+    font-family: "Montserrat", Helvetica;
     border-radius: 4px;
     box-sizing: border-box;
 
@@ -362,7 +393,6 @@
   }
 }
 
-
 #share-button {
   color: black;
   display: inline;
@@ -384,10 +414,6 @@
 }
 
 .header-links {
-  display:inline;
-  z-index: -1000;
-    cursor:pointer;
-  }
   a {
     color: $text-color;
   }
@@ -395,3 +421,10 @@
     cursor: pointer;
   }
 }
+
+.header-link-list {
+  margin-left: 380px;
+  padding-top: 40px;
+}
+
+
