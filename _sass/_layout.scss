@@ -52,10 +52,7 @@
         background-color: $background-color;
         border: 1px solid $grey-color-light;
         border-radius: 5px;
-        .header-background-image {
-          display: none;
-        }
-        text-align: right;
+       text-align: right;
         .header-link-list {
           display: none;
         }
@@ -340,35 +337,52 @@
     border-radius: 4px;
   }
 
-  button {
-    margin: 0px;
-    margin-left: -10px;
-    color: #f9f9f9;
-    background-color: $brand-color;
-    border-color: #ffff43;
-    border: 1px solid transparent;
-    padding: 6px 12px;
-    font-size: 14px;
-    font-family: "Montserrat", Helvetica;
-    border-radius: 4px;
-    box-sizing: border-box;
-
-  }
 }
 
 
 
+
 //header
+.order-button:hover {
+  cursor: pointer;
+}
+
+.order-button {
+  position: absolute;
+  right: 20px;
+  top: 85px;
+  color: white;
+  background-color: $brand-color;
+  border-color: #ffff43;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-family: "Montserrat", Helvetica;
+  border-radius: 4px;
+  box-sizing: border-box;
+  @include media-query($on-palm) {
+    position: relative;
+    display: block;
+    top: 95px;
+  }
+}
+
 .brand-logo {
   margin-left: 50px;
   margin-top: 20px;
   float:left;
+  @include media-query($on-palm) {
+  margin-left: 20px;
+  }
 }
 
 .header-background-image {
   border-top: 2px solid $brand-color;
   border-bottom: 2px solid $brand-color;
   margin-top: 20px;
+  @include media-query($on-palm) {
+    display: none;
+  }
 }
 
 .header-link-list {
@@ -465,4 +479,17 @@
   cursor: pointer;
 }
 
+#copyright {
+  display: inline-block;
+  padding-top: 10px;
+  margin-left: 60px;
+  font-size: 13px;
+}
 
+#made-in-stl {
+  display: inline-block;
+  padding-top: 10px;
+  float:right;
+  margin-right: 60px;
+  font-size: 13px;
+}

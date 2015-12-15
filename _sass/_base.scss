@@ -212,4 +212,14 @@ pre {
     }
 }
 
-
+button {
+  color: white;
+  background-color: $brand-color;
+  border-color: #ffff43;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-family: "Montserrat", Helvetica;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
